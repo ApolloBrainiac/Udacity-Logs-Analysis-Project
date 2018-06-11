@@ -28,9 +28,35 @@ __Virtual Machine:__
 1. Install [Vagrant](https://www.vagrantup.com)
 2. Install [Virtual Box](https://www.virtualbox.org)
 3. Udacity provides the virtual machine configuration needed to run this project. Clone the git repository found [here](https://github.com/udacity/fullstack-nanodegree-vm)
+4. Using the terminal, navigate to the /vagrant folder and run ``` vagrant up ``` to initialize vm.
 
 __Database Setup:__
 1. Download the database setup files found [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 2. Unzip _newsdata.zip_ to retrieve _newsdata.sql_.
 3. Run _newsdata.sql_ using this command
 ``` psql -d news -f newsdata.sql ```
+
+## Running the Project:
+1. Type command ``` vagrant ssh ``` to log into virtual machine.
+2. Navigate to project folder ``` cd /vagrant/Udacity-Logs-Analysis-Project ```
+3. Run ``` python logsAnalysis.py ```
+
+## Expected Result:
+After running the python file and waiting a few moments, you should see the following in your terminal:
+```
+Top 3 Most Popular Articles:
+****************************************
+Candidate is jerk, alleges rival - 338647 views
+Bears love berries, alleges bear - 253801 views
+Bad things gone, say good people - 170098 views
+
+Top 3 Most Popular Authors:
+****************************************
+Ursula La Multa - 507594 views
+Rudolf von Treppenwitz - 423457 views
+Anonymous Contributor - 170098 views
+
+Days where request errors exceeded 1%:
+****************************************
+July 17, 2016 - 2.3%
+```
