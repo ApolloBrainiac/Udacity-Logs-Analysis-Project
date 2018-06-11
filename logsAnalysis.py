@@ -113,4 +113,3 @@ if __name__ == "__main__":
         pop_aut(DBCURSOR)
         error_days(DBCURSOR)
         DBCURSOR.close()
-
