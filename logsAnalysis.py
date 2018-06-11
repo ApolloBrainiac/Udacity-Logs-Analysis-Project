@@ -27,6 +27,16 @@ query1 = """
 
 def pop_art(cursor):
     cursor.execute(query1)
+    results = cursor.fetchall()
+
+    print('Top 3 Most Popular Articles:')
+    print('*' * 40)
+
+    for r in results:
+        print('{title} - {views} views'.format(
+            title=r[0],
+            views=r[1]))
+    print('')
 
 
 # Who are the most popular article aurthors of all time?
@@ -44,6 +54,16 @@ query2 = """
 
 def pop_aut(cursor):
     cursor.execute(query2)
+    results = cursor.fetchall()
+
+    print('Top 3 Most Popular Authors:')
+    print('*' * 40)
+
+    for r in results:
+        print('{author} - {views} views'.format(
+            author=r[0],
+            views=r[1]))
+    print('')
 
 
 # On which days did more than 1% of requests lead to errors?
@@ -74,5 +94,15 @@ query3 = """
 
 def error_days(cursor):
     cursor.execute(query3)
+    result = cursor.fetchall()
+
+    print('Days where request errors exceeded 1%:')
+    print('*' * 40)
+
+    for r in result:
+        print('{date:%B %d, %Y} - {rate_error:.1f}%'.format(
+            date=r[0],
+            rate_error=r[1]))
+    print('')
 
 
