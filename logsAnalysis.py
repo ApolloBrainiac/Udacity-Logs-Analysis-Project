@@ -106,3 +106,11 @@ def error_days(cursor):
     print('')
 
 
+if __name__ == "__main__":
+    DBCURSOR = db_connect()
+    if DBCURSOR:
+        pop_art(DBCURSOR)
+        pop_aut(DBCURSOR)
+        error_days(DBCURSOR)
+        DBCURSOR.close()
+
