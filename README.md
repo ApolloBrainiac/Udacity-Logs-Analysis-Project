@@ -1,9 +1,7 @@
 # Udacity Logs Analysis Project
 3rd Project for Udacity's [Fullstack Nanodegree Program](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
-***
 
 ## Project Details:
-***
 #### Task
 
 *You've been hired onto a team working on a newspaper site. The user-facing newspaper site frontend itself, and the database behind it, are already built and running. You've been asked to build an __internal reporting tool__ that will use information from the database to discover what kind of articles the site's readers like.*
@@ -21,6 +19,18 @@
 
 ## Setup:
 
-This project was developed on a Vagrant run virtual machine.
+__Required Software:__
+- [Python 3.6.x](https://www.python.org/downloads/)
+- [PostgreSQL 9.6.x](https://www.postgresql.org/download/)
+- [pyscopg2 2.7.3.2](http://initd.org/psycopg/docs/install.html)
 
-__
+__Virtual Machine:__
+1. Install [Vagrant](https://www.vagrantup.com)
+2. Install [Virtual Box](https://www.virtualbox.org)
+3. Udacity provides the virtual machine configuration needed to run this project. Clone the git repository found [here](https://github.com/udacity/fullstack-nanodegree-vm)
+
+__Database Setup:__
+1. Download the database setup files found [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
+2. Unzip _newsdata.zip_ to retrieve _newsdata.sql_.
+3. Run _newsdata.sql_ using this command
+``` psql -d news -f newsdata.sql ```
