@@ -13,6 +13,15 @@ def db_connect():
         return cursor
 
 
+def print_result(results):
+    for r in results:
+        print('{x} - {y} views'.format(
+            x=r[0],
+            y=r[1]))
+    print('')
+
+
+
 # What are the three most popular articles of all time?
 query1 = """
          SELECT articles.title, COUNT(*) AS views
@@ -31,12 +40,8 @@ def pop_art(cursor):
 
     print('Top 3 Most Popular Articles:')
     print('*' * 40)
+    print_result(results)
 
-    for r in results:
-        print('{title} - {views} views'.format(
-            title=r[0],
-            views=r[1]))
-    print('')
 
 
 # Who are the most popular article aurthors of all time?
@@ -58,12 +63,7 @@ def pop_aut(cursor):
 
     print('Top 3 Most Popular Authors:')
     print('*' * 40)
-
-    for r in results:
-        print('{author} - {views} views'.format(
-            author=r[0],
-            views=r[1]))
-    print('')
+    print_result(results)
 
 
 # On which days did more than 1% of requests lead to errors?
