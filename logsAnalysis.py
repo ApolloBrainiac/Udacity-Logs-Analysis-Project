@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import psycopg2
 
 
@@ -21,7 +22,6 @@ def print_result(results):
     print('')
 
 
-
 # What are the three most popular articles of all time?
 query1 = """
          SELECT articles.title, COUNT(*) AS views
@@ -41,7 +41,6 @@ def pop_art(cursor):
     print('Top 3 Most Popular Articles:')
     print('*' * 40)
     print_result(results)
-
 
 
 # Who are the most popular article aurthors of all time?
